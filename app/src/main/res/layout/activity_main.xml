@@ -54,7 +54,7 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/seekalph"
+            android:id="@+id/seekalpha"
             android:max="255"
             android:layout_below="@id/buttleft"
             />
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/seekred"
             android:max="255"
-            android:layout_below="@+id/seekalph"
+            android:layout_below="@+id/seekalpha"
             />
         <SeekBar
             android:layout_width="match_parent"
@@ -86,6 +86,7 @@
         android:id="@+id/buttshoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         />
     <TextView
         android:layout_height="wrap_content"
