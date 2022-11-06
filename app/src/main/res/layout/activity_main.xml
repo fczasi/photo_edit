@@ -13,11 +13,86 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        >
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekheight"
+            android:min="1"
+            android:max="100"
+            android:progress="1"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekwidth"
+            android:min="1"
+            android:max="100"
+            android:progress="1"
+            android:layout_below="@id/seekheight"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttleft"
+            android:layout_below="@id/seekwidth"
+            android:text="rotate left"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttright"
+            android:layout_below="@id/seekwidth"
+            android:layout_alignParentRight="true"
+            android:text="rotate right"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekalph"
+            android:max="255"
+            android:layout_below="@id/buttleft"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekred"
+            android:max="255"
+            android:layout_below="@+id/seekalph"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekgreen"
+            android:max="255"
+            android:layout_below="@+id/seekred"
+            />
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekblue"
+            android:max="255"
+            android:layout_below="@+id/seekgreen"
+            />
+    </RelativeLayout>
+
     <Button
         android:text="capture img"
         android:id="@+id/buttshoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Kacper Pawlak"
+        />
+
+
 
 </LinearLayout>
