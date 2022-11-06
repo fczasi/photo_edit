@@ -17,6 +17,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     Button button, buttl, buttr;
     SeekBar seekh, seekw, seeka, seekr, seekg, seekb;
+    RelativeLayout edittools;
 
     public int rotate = 0;
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = findViewById(R.id.imgv);
+        edittools = findViewById(R.id.edittools);
 
         button = findViewById(R.id.buttshoot);
         buttl = findViewById(R.id.buttleft);
@@ -62,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         buttr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rotate -= 90;
+                rotate += 90;
                 imageView.setRotation(rotate);
             }
         });
@@ -211,6 +214,8 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == 100){
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(bitmap);
+            button.setVisibility(View.GONE);
+            edittools.setVisibility(View.VISIBLE);
         }
     }
 }
